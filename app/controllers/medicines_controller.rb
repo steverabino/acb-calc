@@ -2,6 +2,7 @@ class MedicinesController < ApplicationController
   before_action :find_medicine, only: [:edit, :update, :destroy]
 
   def index
+    @medicines = Medicine.all
   end
 
   def new
