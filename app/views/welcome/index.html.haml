@@ -1,7 +1,14 @@
 .container
-  %h1
-    Welcome#index
-  %p
-    Find me in app/views/welcome/index.html.haml
-  = form_tag("/search", :method => "get") do
-    = select_tag(:medicine, options_for_select(medicine_select), prompt: "please select")
+  #medicines
+    = render "medicine"
+    = render "medicine"
+    = render "medicine"
+    = render "medicine"
+
+  = link_to "Add new medicine", "javascript:;", id: "addNewMed"
+  %br
+  %p.total
+    TOTAL!
+
+  #new_med_form{ style: 'display: none;' }
+    = render "medicine"

@@ -14,3 +14,35 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+jQuery(function ($) {
+  $('#addNewMed').click(function() {
+    $('#medicines').append($('#new_med_form').html());
+  });
+
+  $(document).on('change', 'select', function() {
+    $(this.parentElement).children("p").text(this.selectedOptions[0].attributes['score'].value);
+  });
+
+  $(document).on('change', 'select', function() {
+    var total = 0;
+    $('.score').each( function(index, value) {
+      total = total + parseInt(value.textContent);
+    })
+    $('.total').text(total);
+  });
+
+});
+
+(function() {
+  this.removeChoice = function(element) {
+    event.preventDefault();
+    element.closest(".medicine-line").remove();
+    var total = 0;
+    $('.score').each( function(index, value) {
+      total = total + parseInt(value.textContent);
+    })
+    $('.total').text(total);
+  };
+
+}).call(this);
