@@ -1,7 +1,4 @@
 .container
-  %h2
-    ACB Calculator
-
   #medicines
     = render "medicine"
     = render "medicine"
@@ -14,10 +11,12 @@
     TOTAL:
     %span.total
       0
-  %h4
-    = link_to root_path do
-      %span.glyphicon.glyphicon-repeat
-      Reset
+
+  %button.btn.btn-info{onclick: "window.location.reload()"}
+    %span.glyphicon.glyphicon-repeat
+    Reset
+  %br
+  %br
 
   #new_med_form{ style: 'display: none;' }
     = render "medicine"

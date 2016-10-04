@@ -3,11 +3,13 @@
   %head
     %title
       AcbCalculator
+    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1, maximum-scale=1"}
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
   %body
+    = render 'layouts/navbar'
     - flash.each do |name, msg|
       .container
         = content_tag :div, msg, class: [:alert, alert_for(name)]
