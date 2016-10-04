@@ -16,3 +16,7 @@
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+span.score, span.total {
+  font-size: x-large;
+}

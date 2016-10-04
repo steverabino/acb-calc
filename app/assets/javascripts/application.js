@@ -21,7 +21,7 @@ jQuery(function ($) {
   });
 
   $(document).on('change', 'select', function() {
-    $(this.parentElement).children("p").text(this.selectedOptions[0].attributes['score'].value);
+    $(this.parentElement).children("span.score").text(this.selectedOptions[0].attributes['score'].value);
   });
 
   $(document).on('change', 'select', function() {

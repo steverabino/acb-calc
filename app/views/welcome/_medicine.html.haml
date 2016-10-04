@@ -3,5 +3,7 @@
     = select_tag("medicines[]", options_for_select(medicine_select), prompt: "please select", class: "form-control", id: "med-select")
     %a{ href: '#', onclick: "removeChoice($(this))" }
       %span.glyphicon.glyphicon-trash
-    %p.score
+    %span
+      Score:
+    %span.score
       0
