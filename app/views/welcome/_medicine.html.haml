@@ -2,7 +2,7 @@
   .medicine-line.form-inline.form-group.col-xs-8.col-md-8
     = select_tag("medicines[]", options_for_select(medicine_select), prompt: "please select", class: "form-control", id: "med-select")
     %a{ href: '#', onclick: "removeChoice($(this))" }
-      %span.glyphicon.glyphicon-trash
+      %span.glyphicon.glyphicon-trash{ style: "font-size: 1.5em; color: black;" }
     %span
       Score:
     %span.score

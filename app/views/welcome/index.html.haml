@@ -5,16 +5,17 @@
     = render "medicine"
     = render "medicine"
 
-  = link_to "Add new medicine", "javascript:;", id: "addNewMed"
+  = link_to "Add new medicine", "javascript:;", id: "addNewMed", class: "btn btn-info"
+  %button.btn.btn-danger{onclick: "window.location.reload()"}
+    %span.glyphicon.glyphicon-repeat
+    Reset
+
   %br
   %p
     TOTAL:
     %span.total
       0
 
-  %button.btn.btn-info{onclick: "window.location.reload()"}
-    %span.glyphicon.glyphicon-repeat
-    Reset
   %br
   %br
 
