@@ -22,27 +22,23 @@ jQuery(function ($) {
 
   $(document).on('change', 'select', function() {
     $(this.parentElement).children("span.score").text(this.selectedOptions[0].attributes['score'].value);
+    refresh_all_scores();
   });
-
-  $(document).on('change', 'select', function() {
-    var total = 0;
-    $('.score').each( function(index, value) {
-      total = total + parseInt(value.textContent);
-    })
-    $('.total').text(total);
-  });
-
 });
 
 (function() {
   this.removeChoice = function(element) {
     event.preventDefault();
     element.closest(".medicine-line").remove();
-    var total = 0;
-    $('.score').each( function(index, value) {
-      total = total + parseInt(value.textContent);
-    })
-    $('.total').text(total);
+    refresh_all_scores();
   };
 
 }).call(this);
+
+function refresh_all_scores() {
+  var total = 0;
+  $('.score').each( function(index, value) {
+    total = total + parseInt(value.textContent);
+  })
+  $('.total').text(total);
+}
