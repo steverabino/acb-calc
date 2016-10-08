@@ -22,6 +22,8 @@ jQuery(function ($) {
 
   $(document).on('change', 'select', function() {
     $(this.parentElement).children("span.score").text(this.selectedOptions[0].attributes['score'].value);
+    $(this.parentElement).children("span.medicine").text(this.selectedOptions[0].attributes['medicine'].value);
+    $(this.parentElement).children("span.brands").text(this.selectedOptions[0].attributes['brands'].value);
     refresh_all_scores();
   });
 });
