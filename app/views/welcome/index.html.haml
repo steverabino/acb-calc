@@ -1,23 +1,32 @@
 .container
-  #medicines
-    = render "medicine"
-    = render "medicine"
-    = render "medicine"
-    = render "medicine"
+  .left-hand-side.col-xs-12.col-md-4
+    #medicines
+      = render "medicine"
+      = render "medicine"
+      = render "medicine"
 
-  = link_to "Add new medicine", "javascript:;", id: "addNewMed", class: "btn btn-info"
-  %button.btn.btn-danger{onclick: "window.location.reload()"}
-    %span.glyphicon.glyphicon-repeat
-    Reset
+    #buttons-block
+      = link_to "Add new medicine", "javascript:;", id: "addNewMed", class: "btn btn-info"
+      %button.btn.btn-danger{onclick: "window.location.reload()"}
+        %span.glyphicon.glyphicon-repeat
+        Reset
+    #results-block
+      .result-box
+        %span.result-table-heading{ style: 'font-size: 1.5em;' }
+          TOTAL:
+        %span.total.result-table-values#total
+          0
+        %span#high-risk-warning
+          High Risk
+      .result-box#high-risk-info
+        %p
+          Your patient has scored ≥3 and is therefore at a higher risk of confusion, falls and death.
+        %p
+          Please review their medications and, if possible, discuss this with the patient and/or relatives/carers. Please consider if any of these medications could be switched to a lower-risk alternative.
 
-  %br
-  %p
-    TOTAL:
-    %span.total
-      0
 
-  %br
-  %br
+  .right-hand-side.col-xs-12.col-md-8
+    = render "info"
 
-  #new_med_form{ style: 'display: none;' }
-    = render "medicine"
+#new_med_form{ style: 'display: none;' }
+  = render "medicine"

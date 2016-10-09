@@ -1,19 +1,30 @@
 .row
-  .medicine-line.form-inline.form-group.col-xs-8.col-md-8
-    = select_tag("medicines[]", options_for_select(select_options), include_blank: false, class: "form-control", id: "med-select")
-    %a{ href: '#', onclick: "removeChoice($(this))" }
-      %span.glyphicon.glyphicon-trash{ style: "font-size: 1.5em; color: black;" }
-    %span
-      Score:
-    %span.score
-      0
-    %br
-    %span
-      %b
-        Medicine:
-    %span.medicine
-    %br
-    %span
-      %b
-        Brands:
-    %span.brands
+  .medicine-line
+    .top-line
+      .col-xs-10
+        = select_tag("medicines[]", options_for_select(select_options), include_blank: false, class: "form-control", id: "med-select")
+      .bin.col-xs-2{ style: "padding-left: 0;" }
+        %a.glyphicon.glyphicon-trash{ href: '#', onclick: "removeChoice($(this))" }
+    .bottom-line
+      .col-xs-12
+        .div.result-table-heading
+          %span
+            %b
+              Score:
+        .div.result-table-values
+          %span.score
+            0
+      .col-xs-12
+        .div.result-table-heading
+          %span
+            %b
+              Medicine:
+        .div.result-table-values
+          %span.medicine
+      .col-xs-12
+        .div.result-table-heading
+          %span
+            %b
+              Brands:
+        .div.result-table-values
+          %span.brands

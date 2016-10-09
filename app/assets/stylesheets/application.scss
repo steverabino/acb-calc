@@ -20,3 +20,69 @@
 span.score, span.total {
   font-size: x-large;
 }
+
+.row {
+  margin-bottom: 20px;
+}
+
+.top-line {
+  height: 34px;
+  .bin {
+    height: 100%;
+    a {
+      line-height: 150%;
+      font-size: 1.5em;
+      color: black;
+    }
+  }
+}
+
+.result-box {
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.result-table-heading {
+  display: table-cell;
+  width: 75px;
+}
+
+.result-table-values {
+  display: table-cell;
+}
+
+.forget-me-not {
+  width: 50%;
+  display: inline;
+  float: right;
+  border-radius: 5px;
+}
+
+#high-risk-warning {
+  display: table-cell;
+  padding-left: 20px;
+  color: red;
+  font-weight: bold;
+  display: none;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+#info-block {
+  font-size: 1.2em;
+}
+
+#buttons-block,
+#total-block,
+#info-block,
+#results-block {
+  margin-bottom: 20px;
+}
+
+#high-risk-info {
+  color: red;
+  border: 1px red solid;
+  display: none;
+}
