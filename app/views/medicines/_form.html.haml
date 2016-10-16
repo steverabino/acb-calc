@@ -1,0 +1,23 @@
+= form_for @medicine do |f|
+  = f.label :name
+  = f.text_field :name, class: 'form-control'
+  = f.label :score
+  %br
+  .btn-group.score-btn-group{ "data-toggle" => "buttons"}
+    - (0..3).each do |index|
+      = f.label :score, index, class: score_btn_class(index) do
+        = f.radio_button :score, index
+        = index
+  %br
+  = f.label "Brand names"
+  #brands
+    #no_fields
+      - if @medicine.brands.count == 0
+        No brand names
+    = f.fields_for :brands do |brand|
+      = render 'brand_fields', f: brand
+    .med-links{ style: 'float: right' }
+      = link_to_add_association f, :brands, class: 'btn btn-info' do
+        %span.glyphicon.glyphicon-plus
+        Add Brand Name
+  = f.submit "Save Medicine", class: "btn btn-success med-links"

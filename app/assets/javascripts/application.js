@@ -14,6 +14,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require bootstrap-sprockets
+//= require cocoon
 
 jQuery(function ($) {
   $('#addNewMed').click(function() {
@@ -26,6 +28,17 @@ jQuery(function ($) {
     $(this.closest(".row").getElementsByClassName( "brands" )[0]).text(this.selectedOptions[0].attributes['brands'].value);
     refresh_all_scores();
   });
+
+  $(document).on('click', '.add_fields', function() {
+    document.getElementById('no_fields').style.display = 'none';
+  });
+
+  $(document).on('click', '.remove_fields', function() {
+    if (document.getElementsByClassName('input-group').length <= 1) {
+      document.getElementById('no_fields').style.display = 'block';
+    }
+  });
+
 });
 
 (function() {

@@ -87,3 +87,18 @@ span.score, span.total {
   border: 1px red solid;
   display: none;
 }
+
+.score-btn-group {
+  width: 100%;
+  .score-btn {
+    width: 25%;
+  }
+}
+
+.med-links {
+  margin-top: 10px;
+}
+
+.float-right {
+  float: right;
+}

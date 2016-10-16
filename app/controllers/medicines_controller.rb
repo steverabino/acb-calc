@@ -11,13 +11,13 @@ class MedicinesController < ApplicationController
   end
 
   def create
-    @medicine = Medicine.create(medicine_params)
+    @medicine = Medicine.new(medicine_params)
     if @medicine.save
       flash[:success] = "Your medicine was created."
-      redirect_to root_path
+      redirect_to medicines_path
     else
       flash.now[:error] = "Sorry, your medicine could not be saved. Please review your changes and try again."
-      render :new
+      render 'new'
     end
   end
 
@@ -27,22 +27,22 @@ class MedicinesController < ApplicationController
   def update
     if @medicine.update(medicine_params)
       flash[:success] = "Your medicine was updated."
-      redirect_to root_path
+      redirect_to medicines_path
     else
       flash.now[:error] = "Sorry, your medicine could not be saved. Please review your changes and try again."
-      render :edit
+      render 'edit'
     end
   end
 
   def destroy
     @medicine.destroy
-    redirect_to root_path
+    redirect_to medicines_path
   end
 
   private
 
   def medicine_params
-    params.require(:medicine).permit(:name, :score)
+    params.require(:medicine).permit(:name, :score, brands_attributes: [:id, :name, :_destroy])
   end
 
   def find_medicine

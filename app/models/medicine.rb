@@ -1,5 +1,8 @@
 class Medicine < ApplicationRecord
-  has_many :brands, dependent: :destroy
+  has_many :brands, inverse_of: :medicine
+  accepts_nested_attributes_for :brands,
+                                reject_if: proc { |attributes| attributes['name'].blank? },
+                                allow_destroy: true
 
   def brands_list
     list = []
@@ -8,4 +11,5 @@ class Medicine < ApplicationRecord
     end
     list.join(", ")
   end
+
 end
