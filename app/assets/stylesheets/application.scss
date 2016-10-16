@@ -107,3 +107,9 @@ span.score, span.total {
   border-radius: 0;
   border: 0;
 }
+
+@media (min-width: 768px) {
+  .navbar-right {
+    margin-right: 0;
+  }
+}

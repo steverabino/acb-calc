@@ -5,6 +5,7 @@
     = medicine.brands_list
   %td
     = medicine.score
-  %td
-    = link_to "Edit", edit_medicine_path(medicine), class: 'btn btn-primary btn-xs'
-    = link_to "Delete", medicine_path(medicine), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-danger btn-xs'
+  - if user_signed_in?
+    %td
+      = link_to "Edit", edit_medicine_path(medicine), class: 'btn btn-primary btn-xs'
+      = link_to "Delete", medicine_path(medicine), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-danger btn-xs'

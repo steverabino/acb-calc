@@ -1,9 +1,10 @@
 .container
   %h1
     Medicines
-    = link_to new_medicine_path, class: 'btn btn-info float-right' do
-      %span.glyphicon.glyphicon-plus
-      Add new medicine
+    - if user_signed_in?
+      = link_to new_medicine_path, class: 'btn btn-info float-right' do
+        %span.glyphicon.glyphicon-plus
+        Add new medicine
   %table.table.table-striped.table-condensed
     %thead
       %tr
@@ -13,8 +14,9 @@
           Brands
         %th
           = sort_link "score"
-        %th
-          Actions
+        - if user_signed_in?
+          %th
+            Actions
     %tbody
       - @medicines.each do |medicine|
         = render "medicine", medicine: medicine

@@ -1,5 +1,5 @@
 class Medicine < ApplicationRecord
-  has_many :brands, inverse_of: :medicine
+  has_many :brands, inverse_of: :medicine, dependent: :destroy
   accepts_nested_attributes_for :brands,
                                 reject_if: proc { |attributes| attributes['name'].blank? },
                                 allow_destroy: true

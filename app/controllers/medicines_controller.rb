@@ -1,9 +1,10 @@
 class MedicinesController < ApplicationController
   before_action :find_medicine, only: [:edit, :update, :destroy]
   helper_method :sort_column, :sort_direction
+  before_action :authenticate_user!, except: [:index]
 
   def index
-    @medicines = Medicine.all.order("LOWER(#{sort_column}) #{sort_direction}")
+    @medicines = Medicine.all.order("#{sort_column} #{sort_direction}")
   end
 
   def new
