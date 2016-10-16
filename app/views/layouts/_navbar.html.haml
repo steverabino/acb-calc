@@ -1,13 +1,18 @@
-.navbar.navbar-default
-  .navbar-header
+.navbar.navbar-default.navbar-static-top
+  .container
+    %button.navbar-toggle(type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse")
+      %span.icon-bar
+      %span.icon-bar
+      %span.icon-bar
     .navbar-brand
-      Anticholinergic Burden Calculator
-  %ul.nav.navbar-nav.navbar-right
-    %li
-      = link_to "All medicines", medicines_path
-    - if user_signed_in?
-      %li
-        = link_to "Logout", destroy_user_session_path, method: :delete
-    - else
-      %li
-        = link_to "Admin login", new_user_session_path
+      ACB Calculator
+    .navbar-collapse.collapse.navbar-responsive-collapse
+      %ul.nav.navbar-nav.navbar-right
+        %li
+          = link_to "All medicines", medicines_path
+        - if user_signed_in?
+          %li
+            = link_to "Logout", destroy_user_session_path, method: :delete
+        - else
+          %li
+            = link_to "Admin login", new_user_session_path
