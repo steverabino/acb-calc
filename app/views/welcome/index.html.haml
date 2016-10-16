@@ -6,7 +6,9 @@
       = render "medicine"
 
     #buttons-block
-      = link_to "Add new medicine", "javascript:;", id: "addNewMed", class: "btn btn-info"
+      = link_to "javascript:;", id: "addNewMed", class: "btn btn-info" do
+        %span.glyphicon.glyphicon-plus
+        Add new medicine
       %button.btn.btn-danger{onclick: "window.location.reload()"}
         %span.glyphicon.glyphicon-repeat
         Reset
