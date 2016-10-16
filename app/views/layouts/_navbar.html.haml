@@ -1,12 +1,14 @@
-.navbar.navbar-default.navbar-static-top
-  .container
-    %button.navbar-toggle(type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse")
-      %span.icon-bar
-      %span.icon-bar
-      %span.icon-bar
-    .navbar-brand
-      ACB Calculator
-    .navbar-collapse.collapse.navbar-responsive-collapse
+%nav.navbar.navbar-default
+  .container-fluid
+    .navbar-header
+      %button.navbar-toggle.collapsed(type="button" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false")
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      .navbar-brand
+        ACB Calculator
+
+    .collapse.navbar-collapse#navbar-collapse-1
       %ul.nav.navbar-nav.navbar-right
         %li
           = link_to "All medicines", medicines_path
