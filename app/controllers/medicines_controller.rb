@@ -16,7 +16,7 @@ class MedicinesController < ApplicationController
       flash[:success] = "Your medicine was created."
       redirect_to medicines_path
     else
-      flash.now[:error] = "Sorry, your medicine could not be saved. Please review your changes and try again."
+      flash.now[:error] = @medicine.errors.full_messages.to_sentence
       render 'new'
     end
   end
@@ -29,7 +29,7 @@ class MedicinesController < ApplicationController
       flash[:success] = "Your medicine was updated."
       redirect_to medicines_path
     else
-      flash.now[:error] = "Sorry, your medicine could not be saved. Please review your changes and try again."
+      flash.now[:error] = @medicine.errors.full_messages.to_sentence
       render 'edit'
     end
   end

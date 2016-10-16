@@ -3,6 +3,8 @@ class Medicine < ApplicationRecord
   accepts_nested_attributes_for :brands,
                                 reject_if: proc { |attributes| attributes['name'].blank? },
                                 allow_destroy: true
+  validates :name, presence: true, uniqueness: { message: "already exists" }
+  validates :score, presence: true
 
   def brands_list
     list = []

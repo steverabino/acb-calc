@@ -1,13 +1,15 @@
 = form_for @medicine do |f|
   = f.label :name
-  = f.text_field :name, class: 'form-control'
+  = f.text_field :name, class: 'form-control', required: true
+
   = f.label :score
   %br
   .btn-group.score-btn-group{ "data-toggle" => "buttons"}
     - (0..3).each do |index|
       = f.label :score, index, class: score_btn_class(index) do
-        = f.radio_button :score, index
+        = f.radio_button :score, index, required: true
         = index
+
   %br
   = f.label "Brand names"
   #brands
