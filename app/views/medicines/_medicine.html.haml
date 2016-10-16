@@ -1,0 +1,10 @@
+%tr
+  %td
+    = medicine.name
+  %td
+    = medicine.brands_list
+  %td
+    = medicine.score
+  %td
+    = link_to "Edit", edit_medicine_path(medicine), class: 'btn btn-primary btn-xs'
+    = link_to "Delete", medicine_path(medicine), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-danger btn-xs'

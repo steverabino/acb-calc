@@ -1,8 +1,9 @@
 class MedicinesController < ApplicationController
   before_action :find_medicine, only: [:edit, :update, :destroy]
+  helper_method :sort_column, :sort_direction
 
   def index
-    @medicines = Medicine.all
+    @medicines = Medicine.all.order("LOWER(#{sort_column}) #{sort_direction}")
   end
 
   def new
@@ -46,6 +47,18 @@ class MedicinesController < ApplicationController
 
   def find_medicine
     @medicine = Medicine.find(params[:id])
+  end
+
+  def sortable_columns
+    ["name", "score"]
+  end
+
+  def sort_column
+    sortable_columns.include?(params[:column]) ? params[:column] : "name"
+  end
+
+  def sort_direction
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
   end
 
 end
