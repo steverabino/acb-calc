@@ -113,118 +113,116 @@ medicines = Medicine.create([
   { name: 'Trospium', score: 3 }
 ])
 
-brands = Brand.create([
-  { name: 'Theralen™', medicine: Medicine.where(name: 'Alimemazine').first },
-  { name: 'Xanax™', medicine: Medicine.where(name: 'Alprazolam').first },
-  { name: 'Spasmonal™', medicine: Medicine.where(name: 'Alverine').first },
-  { name: 'Abilify™', medicine: Medicine.where(name: 'Aripiprazole').first },
-  { name: 'Saphris™', medicine: Medicine.where(name: 'Asenapine').first },
-  { name: 'Tenormin™', medicine: Medicine.where(name: 'Atenolol').first },
-  { name: 'Wellbutrin™', medicine: Medicine.where(name: 'Bupropion').first },
-  { name: 'Zyban™', medicine: Medicine.where(name: 'Bupropion').first },
-  { name: 'Capoten™', medicine: Medicine.where(name: 'Captopril').first },
-  { name: 'Zyrtec™', medicine: Medicine.where(name: 'Cetirizine').first },
-  { name: 'Diuril™', medicine: Medicine.where(name: 'Chlortalidone').first },
-  { name: 'Hygroton™', medicine: Medicine.where(name: 'Chlortalidone').first },
-  { name: 'Tagamet™', medicine: Medicine.where(name: 'Cimetidine').first },
-  { name: 'Librax™', medicine: Medicine.where(name: 'Clidinium').first },
-  { name: 'Tranxene™', medicine: Medicine.where(name: 'Clorazepate').first },
-  { name: 'Contin™', medicine: Medicine.where(name: 'Codeine').first },
-  { name: 'Colcrys™', medicine: Medicine.where(name: 'Colchicine').first },
-  { name: 'Clarinex™', medicine: Medicine.where(name: 'Desloratadine').first },
-  { name: 'Valium™', medicine: Medicine.where(name: 'Diazepam').first },
-  { name: 'Lanoxin™', medicine: Medicine.where(name: 'Digoxin').first },
-  { name: 'Persantine™', medicine: Medicine.where(name: 'Dipyridamole').first },
-  { name: 'Norpace™', medicine: Medicine.where(name: 'Disopyramide').first },
-  { name: 'Duragesic™', medicine: Medicine.where(name: 'Fentanyl').first },
-  { name: 'Actiq™', medicine: Medicine.where(name: 'Fentanyl').first },
-  { name: 'Luvox™', medicine: Medicine.where(name: 'Fluvoxamine').first },
-  { name: 'Lasix™', medicine: Medicine.where(name: 'Furosemide').first },
-  { name: 'Haldol™', medicine: Medicine.where(name: 'Haloperidol').first },
-  { name: 'Apresoline™', medicine: Medicine.where(name: 'Hydralazine').first },
-  { name: 'Cortef™', medicine: Medicine.where(name: 'Hydrocortisone').first },
-  { name: 'Cortaid™', medicine: Medicine.where(name: 'Hydrocortisone').first },
-  { name: 'Fanapt™', medicine: Medicine.where(name: 'Iloperidone').first },
-  { name: 'Isordil™', medicine: Medicine.where(name: 'Isosorbide Dinitrate').first },
-  { name: 'Ismo™', medicine: Medicine.where(name: 'Isosorbide Mononitrate').first },
-  { name: 'Xyzal™', medicine: Medicine.where(name: 'Levocetirizine').first },
-  { name: 'Immodium™', medicine: Medicine.where(name: 'Loperamide').first },
-  { name: 'Claritin™', medicine: Medicine.where(name: 'Loratadine').first },
-  { name: 'Lopressor™', medicine: Medicine.where(name: 'Metoprolol').first },
-  { name: 'Toprol™', medicine: Medicine.where(name: 'Metoprolol').first },
-  { name: 'MS Contin™', medicine: Medicine.where(name: 'Morphine').first },
-  { name: 'Avinza™', medicine: Medicine.where(name: 'Morphine').first },
-  { name: 'Procardia™', medicine: Medicine.where(name: 'Nifedipine').first },
-  { name: 'Adalat™', medicine: Medicine.where(name: 'Nifedipine').first },
-  { name: 'Invega™', medicine: Medicine.where(name: 'Paliperidone').first },
-  { name: 'Deltasone™', medicine: Medicine.where(name: 'Prednisolone').first },
-  { name: 'Sterapred™', medicine: Medicine.where(name: 'Prednisolone').first },
-  { name: 'Quinaglute™', medicine: Medicine.where(name: 'Quinidine').first },
-  { name: 'Zantac™', medicine: Medicine.where(name: 'Ranitidine').first },
-  { name: 'Risperdal™', medicine: Medicine.where(name: 'Risperidone').first },
-  { name: 'Theodur™', medicine: Medicine.where(name: 'Theophylline').first },
-  { name: 'Uniphyl™', medicine: Medicine.where(name: 'Theophylline').first },
-  { name: 'Desyrel™', medicine: Medicine.where(name: 'Trazodone').first },
-  { name: 'Dyrenium™', medicine: Medicine.where(name: 'Triamterene').first },
-  { name: 'Effexor™', medicine: Medicine.where(name: 'Venlafaxine').first },
-  { name: 'Coumadin™', medicine: Medicine.where(name: 'Warfarin').first },
-  { name: 'Symmetrel™', medicine: Medicine.where(name: 'Amantadine').first },
-  { name: 'Tegretol™', medicine: Medicine.where(name: 'Carbamazepine').first },
-  { name: 'Flexeril™', medicine: Medicine.where(name: 'Cyclobenzaprine').first },
-  { name: 'Periactin™', medicine: Medicine.where(name: 'Cyproheptadine').first },
-  { name: 'Loxitane™', medicine: Medicine.where(name: 'Loxapine').first },
-  { name: 'Demerol™', medicine: Medicine.where(name: 'Pethidine').first },
-  { name: 'Levoprome™', medicine: Medicine.where(name: 'Levomepromazine').first },
-  { name: 'Moban™', medicine: Medicine.where(name: 'Molindone').first },
-  { name: 'Nefogesic™', medicine: Medicine.where(name: 'Nefopam').first },
-  { name: 'Trileptal™', medicine: Medicine.where(name: 'Oxcarbazepine').first },
-  { name: 'Orap™', medicine: Medicine.where(name: 'Pimozide').first },
-  { name: 'Elavil™', medicine: Medicine.where(name: 'Amitriptyline').first },
-  { name: 'Asendin™', medicine: Medicine.where(name: 'Amoxapine').first },
-  { name: 'Sal-Tropine™', medicine: Medicine.where(name: 'Atropine').first },
-  { name: 'Cogentin™', medicine: Medicine.where(name: 'Benztropine').first },
-  { name: 'Dimetapp™', medicine: Medicine.where(name: 'Brompheniramine').first },
-  { name: 'Histex™', medicine: Medicine.where(name: 'Carbinoxamine').first },
-  { name: 'Carbihist™', medicine: Medicine.where(name: 'Carbinoxamine').first },
-  { name: 'Chlor-Trimeton™', medicine: Medicine.where(name: 'Chlorphanamine').first },
-  { name: 'Thorazine™', medicine: Medicine.where(name: 'Chlorpromazine').first },
-  { name: 'Tavist™', medicine: Medicine.where(name: 'Clemastine').first },
-  { name: 'Anafranil™', medicine: Medicine.where(name: 'Clomipramine').first },
-  { name: 'Clozaril™', medicine: Medicine.where(name: 'Clozapine').first },
-  { name: 'Enablex™', medicine: Medicine.where(name: 'Darifenacin').first },
-  { name: 'Norpramin™', medicine: Medicine.where(name: 'Desipramine').first },
-  { name: 'Bentyl™', medicine: Medicine.where(name: 'Dicycloverine').first },
-  { name: 'Dramamine™', medicine: Medicine.where(name: 'Dimenhydrinate').first },
-  { name: 'Benadryl™', medicine: Medicine.where(name: 'Diphenhydramine').first },
-  { name: 'Nytol™', medicine: Medicine.where(name: 'Diphenhydramine').first },
-  { name: 'Sleepeaze™', medicine: Medicine.where(name: 'Diphenhydramine').first },
-  { name: 'Sinequan™', medicine: Medicine.where(name: 'Doxepin').first },
-  { name: 'Unisom™, others', medicine: Medicine.where(name: 'Doxylamine').first },
-  { name: 'Toviaz™', medicine: Medicine.where(name: 'Fesoterodine').first },
-  { name: 'Urispas™', medicine: Medicine.where(name: 'Flavoxate').first },
-  { name: 'Atarax™', medicine: Medicine.where(name: 'Hydroxyzine').first },
-  { name: 'Vistaril™', medicine: Medicine.where(name: 'Hydroxyzine').first },
-  { name: 'Anaspaz™', medicine: Medicine.where(name: 'Hyoscyamine').first },
-  { name: 'Levsin™', medicine: Medicine.where(name: 'Hyoscyamine').first },
-  { name: 'Tofranil™', medicine: Medicine.where(name: 'Imipramine').first },
-  { name: 'Antivert™', medicine: Medicine.where(name: 'Meclizine').first },
-  { name: 'Robaxin™', medicine: Medicine.where(name: 'Methocarbamol').first },
-  { name: 'Pamelor™', medicine: Medicine.where(name: 'Nortriptyline').first },
-  { name: 'Zyprexa™', medicine: Medicine.where(name: 'Olanzapine').first },
-  { name: 'Norflex™', medicine: Medicine.where(name: 'Orphenadrine').first },
-  { name: 'Ditropan™', medicine: Medicine.where(name: 'Oxybutynin').first },
-  { name: 'Paxil™', medicine: Medicine.where(name: 'Paroxetine').first },
-  { name: 'Trilafon™', medicine: Medicine.where(name: 'Perphenazine').first },
-  { name: 'Phenergan™', medicine: Medicine.where(name: 'Promethazine').first },
-  { name: 'Pro-Banthine™', medicine: Medicine.where(name: 'Propantheline').first },
-  { name: 'Detrunorm™', medicine: Medicine.where(name: 'Propiverine').first },
-  { name: 'Seroquel™', medicine: Medicine.where(name: 'Quetiapine').first },
-  { name: 'Transderm Scop™', medicine: Medicine.where(name: 'Hyoscine Hydrobromide').first },
-  { name: 'Vesicare™', medicine: Medicine.where(name: 'Solifenacin').first },
-  { name: 'Mellaril™', medicine: Medicine.where(name: 'Thioridazine').first },
-  { name: 'Detrol™', medicine: Medicine.where(name: 'Tolterodine').first },
-  { name: 'Stelazine™', medicine: Medicine.where(name: 'Trifluoperazine').first },
-  { name: 'Artane™', medicine: Medicine.where(name: 'Trihexyphenidyl').first },
-  { name: 'Surmontil™', medicine: Medicine.where(name: 'Trimipramine').first },
-  { name: 'Sanctura™', medicine: Medicine.where(name: 'Trospium').first }
-])
+Medicine.where(name: 'Alimemazine').first.brands.create(name: 'Theralen™')
+Medicine.where(name: 'Alprazolam').first.brands.create(name: 'Xanax™')
+Medicine.where(name: 'Alverine').first.brands.create(name: 'Spasmonal™')
+Medicine.where(name: 'Aripiprazole').first.brands.create(name: 'Abilify™')
+Medicine.where(name: 'Asenapine').first.brands.create(name: 'Saphris™')
+Medicine.where(name: 'Atenolol').first.brands.create(name: 'Tenormin™')
+Medicine.where(name: 'Bupropion').first.brands.create(name: 'Wellbutrin™')
+Medicine.where(name: 'Bupropion').first.brands.create(name: 'Zyban™')
+Medicine.where(name: 'Captopril').first.brands.create(name: 'Capoten™')
+Medicine.where(name: 'Cetirizine').first.brands.create(name: 'Zyrtec™')
+Medicine.where(name: 'Chlortalidone').first.brands.create(name: 'Diuril™')
+Medicine.where(name: 'Chlortalidone').first.brands.create(name: 'Hygroton™')
+Medicine.where(name: 'Cimetidine').first.brands.create(name: 'Tagamet™')
+Medicine.where(name: 'Clidinium').first.brands.create(name: 'Librax™')
+Medicine.where(name: 'Clorazepate').first.brands.create(name: 'Tranxene™')
+Medicine.where(name: 'Codeine').first.brands.create(name: 'Contin™')
+Medicine.where(name: 'Colchicine').first.brands.create(name: 'Colcrys™')
+Medicine.where(name: 'Desloratadine').first.brands.create(name: 'Clarinex™')
+Medicine.where(name: 'Diazepam').first.brands.create(name: 'Valium™')
+Medicine.where(name: 'Digoxin').first.brands.create(name: 'Lanoxin™')
+Medicine.where(name: 'Dipyridamole').first.brands.create(name: 'Persantine™')
+Medicine.where(name: 'Disopyramide').first.brands.create(name: 'Norpace™')
+Medicine.where(name: 'Fentanyl').first.brands.create(name: 'Duragesic™')
+Medicine.where(name: 'Fentanyl').first.brands.create(name: 'Actiq™')
+Medicine.where(name: 'Fluvoxamine').first.brands.create(name: 'Luvox™')
+Medicine.where(name: 'Furosemide').first.brands.create(name: 'Lasix™')
+Medicine.where(name: 'Haloperidol').first.brands.create(name: 'Haldol™')
+Medicine.where(name: 'Hydralazine').first.brands.create(name: 'Apresoline™')
+Medicine.where(name: 'Hydrocortisone').first.brands.create(name: 'Cortef™')
+Medicine.where(name: 'Hydrocortisone').first.brands.create(name: 'Cortaid™')
+Medicine.where(name: 'Iloperidone').first.brands.create(name: 'Fanapt™')
+Medicine.where(name: 'Isosorbide Dinitrate').first.brands.create(name: 'Isordil™')
+Medicine.where(name: 'Isosorbide Mononitrate').first.brands.create(name: 'Ismo™')
+Medicine.where(name: 'Levocetirizine').first.brands.create(name: 'Xyzal™')
+Medicine.where(name: 'Loperamide').first.brands.create(name: 'Immodium™')
+Medicine.where(name: 'Loratadine').first.brands.create(name: 'Claritin™')
+Medicine.where(name: 'Metoprolol').first.brands.create(name: 'Lopressor™')
+Medicine.where(name: 'Metoprolol').first.brands.create(name: 'Toprol™')
+Medicine.where(name: 'Morphine').first.brands.create(name: 'MS Contin™')
+Medicine.where(name: 'Morphine').first.brands.create(name: 'Avinza™')
+Medicine.where(name: 'Nifedipine').first.brands.create(name: 'Procardia™')
+Medicine.where(name: 'Nifedipine').first.brands.create(name: 'Adalat™')
+Medicine.where(name: 'Paliperidone').first.brands.create(name: 'Invega™')
+Medicine.where(name: 'Prednisolone').first.brands.create(name: 'Deltasone™')
+Medicine.where(name: 'Prednisolone').first.brands.create(name: 'Sterapred™')
+Medicine.where(name: 'Quinidine').first.brands.create(name: 'Quinaglute™')
+Medicine.where(name: 'Ranitidine').first.brands.create(name: 'Zantac™')
+Medicine.where(name: 'Risperidone').first.brands.create(name: 'Risperdal™')
+Medicine.where(name: 'Theophylline').first.brands.create(name: 'Theodur™')
+Medicine.where(name: 'Theophylline').first.brands.create(name: 'Uniphyl™')
+Medicine.where(name: 'Trazodone').first.brands.create(name: 'Desyrel™')
+Medicine.where(name: 'Triamterene').first.brands.create(name: 'Dyrenium™')
+Medicine.where(name: 'Venlafaxine').first.brands.create(name: 'Effexor™')
+Medicine.where(name: 'Warfarin').first.brands.create(name: 'Coumadin™')
+Medicine.where(name: 'Amantadine').first.brands.create(name: 'Symmetrel™')
+Medicine.where(name: 'Carbamazepine').first.brands.create(name: 'Tegretol™')
+Medicine.where(name: 'Cyclobenzaprine').first.brands.create(name: 'Flexeril™')
+Medicine.where(name: 'Cyproheptadine').first.brands.create(name: 'Periactin™')
+Medicine.where(name: 'Loxapine').first.brands.create(name: 'Loxitane™')
+Medicine.where(name: 'Pethidine').first.brands.create(name: 'Demerol™')
+Medicine.where(name: 'Levomepromazine').first.brands.create(name: 'Levoprome™')
+Medicine.where(name: 'Molindone').first.brands.create(name: 'Moban™')
+Medicine.where(name: 'Nefopam').first.brands.create(name: 'Nefogesic™')
+Medicine.where(name: 'Oxcarbazepine').first.brands.create(name: 'Trileptal™')
+Medicine.where(name: 'Pimozide').first.brands.create(name: 'Orap™')
+Medicine.where(name: 'Amitriptyline').first.brands.create(name: 'Elavil™')
+Medicine.where(name: 'Amoxapine').first.brands.create(name: 'Asendin™')
+Medicine.where(name: 'Atropine').first.brands.create(name: 'Sal-Tropine™')
+Medicine.where(name: 'Benztropine').first.brands.create(name: 'Cogentin™')
+Medicine.where(name: 'Brompheniramine').first.brands.create(name: 'Dimetapp™')
+Medicine.where(name: 'Carbinoxamine').first.brands.create(name: 'Histex™')
+Medicine.where(name: 'Carbinoxamine').first.brands.create(name: 'Carbihist™')
+Medicine.where(name: 'Chlorphanamine').first.brands.create(name: 'Chlor-Trimeton™')
+Medicine.where(name: 'Chlorpromazine').first.brands.create(name: 'Thorazine™')
+Medicine.where(name: 'Clemastine').first.brands.create(name: 'Tavist™')
+Medicine.where(name: 'Clomipramine').first.brands.create(name: 'Anafranil™')
+Medicine.where(name: 'Clozapine').first.brands.create(name: 'Clozaril™')
+Medicine.where(name: 'Darifenacin').first.brands.create(name: 'Enablex™')
+Medicine.where(name: 'Desipramine').first.brands.create(name: 'Norpramin™')
+Medicine.where(name: 'Dicycloverine').first.brands.create(name: 'Bentyl™')
+Medicine.where(name: 'Dimenhydrinate').first.brands.create(name: 'Dramamine™')
+Medicine.where(name: 'Diphenhydramine').first.brands.create(name: 'Benadryl™')
+Medicine.where(name: 'Diphenhydramine').first.brands.create(name: 'Nytol™')
+Medicine.where(name: 'Diphenhydramine').first.brands.create(name: 'Sleepeaze™')
+Medicine.where(name: 'Doxepin').first.brands.create(name: 'Sinequan™')
+Medicine.where(name: 'Doxylamine').first.brands.create(name: 'Unisom™')
+Medicine.where(name: 'Fesoterodine').first.brands.create(name: 'Toviaz™')
+Medicine.where(name: 'Flavoxate').first.brands.create(name: 'Urispas™')
+Medicine.where(name: 'Hydroxyzine').first.brands.create(name: 'Atarax™')
+Medicine.where(name: 'Hydroxyzine').first.brands.create(name: 'Vistaril™')
+Medicine.where(name: 'Hyoscyamine').first.brands.create(name: 'Anaspaz™')
+Medicine.where(name: 'Hyoscyamine').first.brands.create(name: 'Levsin™')
+Medicine.where(name: 'Imipramine').first.brands.create(name: 'Tofranil™')
+Medicine.where(name: 'Meclizine').first.brands.create(name: 'Antivert™')
+Medicine.where(name: 'Methocarbamol').first.brands.create(name: 'Robaxin™')
+Medicine.where(name: 'Nortriptyline').first.brands.create(name: 'Pamelor™')
+Medicine.where(name: 'Olanzapine').first.brands.create(name: 'Zyprexa™')
+Medicine.where(name: 'Orphenadrine').first.brands.create(name: 'Norflex™')
+Medicine.where(name: 'Oxybutynin').first.brands.create(name: 'Ditropan™')
+Medicine.where(name: 'Paroxetine').first.brands.create(name: 'Paxil™')
+Medicine.where(name: 'Perphenazine').first.brands.create(name: 'Trilafon™')
+Medicine.where(name: 'Promethazine').first.brands.create(name: 'Phenergan™')
+Medicine.where(name: 'Propantheline').first.brands.create(name: 'Pro-Banthine™')
+Medicine.where(name: 'Propiverine').first.brands.create(name: 'Detrunorm™')
+Medicine.where(name: 'Quetiapine').first.brands.create(name: 'Seroquel™')
+Medicine.where(name: 'Hyoscine Hydrobromide').first.brands.create(name: 'Transderm Scop™')
+Medicine.where(name: 'Solifenacin').first.brands.create(name: 'Vesicare™')
+Medicine.where(name: 'Thioridazine').first.brands.create(name: 'Mellaril™')
+Medicine.where(name: 'Tolterodine').first.brands.create(name: 'Detrol™')
+Medicine.where(name: 'Trifluoperazine').first.brands.create(name: 'Stelazine™')
+Medicine.where(name: 'Trihexyphenidyl').first.brands.create(name: 'Artane™')
+Medicine.where(name: 'Trimipramine').first.brands.create(name: 'Surmontil™')
+Medicine.where(name: 'Trospium').first.brands.create(name: 'Sanctura™')
