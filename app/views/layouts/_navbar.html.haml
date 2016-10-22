@@ -11,7 +11,9 @@
     .collapse.navbar-collapse#navbar-collapse-1
       %ul.nav.navbar-nav.navbar-right
         %li
-          = link_to "All medicines", medicines_path
+          = link_to "About ACB", "/pages/about"
+        %li
+          = link_to "Medicines Scorecard", medicines_path
         - if user_signed_in?
           %li
             = link_to "Change Password", edit_user_registration_path
