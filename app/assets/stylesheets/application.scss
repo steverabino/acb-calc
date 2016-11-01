@@ -17,12 +17,27 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+html,
+body { height: 100%; }
+
+body {
+  display: table;
+  width: 100%;
+}
+
+.page-row {
+  display: table-row;
+  height: 1px;
+}
+
+.page-row-expanded { height: 100%; }
+
 span.score, span.total {
   font-size: x-large;
 }
 
-.row {
-  margin-bottom: 20px;
+footer.navbar {
+  margin-bottom: 0;
 }
 
 .top-line {
@@ -59,6 +74,11 @@ span.score, span.total {
   float: right;
   border-radius: 5px;
   margin: 2%;
+}
+
+.grandma {
+  display: inline;
+  float: right;
 }
 
 #high-risk-warning {
@@ -112,4 +132,24 @@ span.score, span.total {
   .navbar-right {
     margin-right: 0;
   }
+}
+
+.footer-section {
+  border-bottom: 1px solid lightgray;
+  border-right: none;
+}
+
+@media (min-width: 992px) {
+  .footer-section {
+    border-bottom: none;
+    border-right: 1px solid lightgray;
+  }
+}
+
+.bottom-rule {
+  border-bottom: 1px solid lightgray;
+}
+
+.brands-container {
+  margin-bottom: 10px;
 }

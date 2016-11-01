@@ -6,7 +6,7 @@
       .bin.col-xs-2{ style: "padding-left: 0;" }
         %a.glyphicon.glyphicon-trash{ href: '#', onclick: "removeChoice($(this))" }
     .bottom-line
-      .col-xs-12
+      .col-xs-12.score-container
         .div.result-table-heading
           %span
             %b
@@ -14,14 +14,14 @@
         .div.result-table-values
           %span.score
             0
-      .col-xs-12
+      .col-xs-12.medicine-container
         .div.result-table-heading
           %span
             %b
               Medicine:
         .div.result-table-values
           %span.medicine
-      .col-xs-12
+      .col-xs-12.brands-container
         .div.result-table-heading
           %span
             %b
