@@ -7,10 +7,10 @@
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-    %link{ rel: 'manifest', href: '/assets/manifest.json' }
-    %link{ href: '/assets/icon.png', rel: 'apple-touch-icon' }
-    %meta{ name: 'apple-mobile-web-app-capable', content: 'yes' }
-    %meta{ name: 'apple-mobile-web-app-title', content: 'ACB Calc' }
+    %link{ rel: 'manifest', href: 'webapp/manifest.json' }
+    %meta{ content: 'yes', name: 'apple-mobile-web-app-capable'}
+    %meta{ content: 'ACB Calc', name: 'apple-mobile-web-app-title' }
+    %link{ href: '/apple-touch-icon.png', rel: 'apple-touch-icon' }
   %body
     .page-row.page-row-expanded
       = render 'layouts/navbar'
