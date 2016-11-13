@@ -13,9 +13,9 @@
  *= require_tree .
  *= require_self
  */
-// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "fonts";
 
 html,
 body { height: 100%; }
@@ -53,10 +53,14 @@ footer.navbar {
 }
 
 .result-box {
-  border: 1px solid black;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
   padding: 5px;
-  border-radius: 5px;
   margin-bottom: 10px;
+  .result-table-heading {
+    font-size: 1.2em;
+    width: 140px;
+  }
 }
 
 .result-table-heading {
@@ -106,6 +110,7 @@ footer.navbar {
   color: red;
   border: 1px red solid;
   display: none;
+  border-radius: 5px;
 }
 
 .score-btn-group {
@@ -152,4 +157,25 @@ footer.navbar {
 
 .brands-container {
   margin-bottom: 10px;
+}
+
+.navbar-brand {
+  padding-top: 5px;
+  .logo {
+    height: 40px;
+    float: left;
+  }
+  .brand-name {
+    display: inline-block;
+    font-family: "Proxima Nova";
+    .brand-name-large {
+      margin: 4px 0 0 0;
+      font-size: x-large;
+      text-align: center;
+    }
+    .brand-name-small {
+      font-size: small;
+      text-align: center;
+    }
+  }
 }
