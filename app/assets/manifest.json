@@ -1,0 +1,22 @@
+{
+  "short_name": "ACB Calc",
+  "name": "ACB Calculator",
+  "version": "0.0.0.1",
+  "manifest_version": 2,
+  "icons": {
+    "192": "/images/icon.png"
+  },
+  "start_url": "/",
+  "app": {
+    "urls": [
+      "http://www.acbcalc.com/",
+      "http://www.acbcalc.com/medicines/",
+      "http://www.acbcalc.com/pages/about"
+    ],
+    "launch": {
+      "web_url": "http://www.acbcalc.com/"
+    }
+  },
+  "display": "standalone",
+  "orientation": "portrait"
+}
