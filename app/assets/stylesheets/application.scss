@@ -72,14 +72,6 @@ footer.navbar {
   display: table-cell;
 }
 
-.forget-me-not {
-  width: 50%;
-  display: inline;
-  float: right;
-  border-radius: 5px;
-  margin: 2%;
-}
-
 .grandma {
   display: inline;
   float: right;
@@ -159,23 +151,30 @@ footer.navbar {
   margin-bottom: 10px;
 }
 
-.navbar-brand {
-  padding-top: 5px;
-  .logo {
-    height: 40px;
-    float: left;
+nav.navbar {
+  .container {
+    margin-top: 5px;
   }
-  .brand-name {
-    display: inline-block;
-    font-family: "Proxima Nova";
-    .brand-name-large {
-      margin: 4px 0 0 0;
-      font-size: x-large;
-      text-align: center;
+  min-height: 60px;
+  .navbar-brand {
+    padding: 0 15px;
+    margin-top: -1px;
+    .logo {
+      height: 50px;
+      float: left;
     }
-    .brand-name-small {
-      font-size: small;
-      text-align: center;
+    .brand-name {
+      display: inline-block;
+      font-family: "Proxima Nova";
+      .brand-name-large {
+        margin: 10px 0 0 0;
+        font-size: xx-large;
+        text-align: center;
+      }
+      .brand-name-small {
+        font-size: medium;
+        text-align: center;
+      }
     }
   }
 }
