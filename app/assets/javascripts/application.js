@@ -59,7 +59,8 @@ function remove_all_meds() {
   refresh_all_scores();
 }
 
-function add_new_med(count = 1) {
+function add_new_med(count) {
+  var count = typeof count === 'undefined' ? 1 : count;
   var foo = new Array(count);
   for(var i=0; i<foo.length; i++){
     document.getElementById('medicines').append(document.getElementById('new_med_form').children[0].cloneNode(true));
