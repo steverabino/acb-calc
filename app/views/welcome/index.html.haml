@@ -9,7 +9,7 @@
       = link_to "javascript:;", id: "addNewMed", class: "btn btn-info", style: "margin-right: 5px" do
         %span.glyphicon.glyphicon-plus
         Add new medicine
-      %button.btn.btn-danger{onclick: "window.location.reload()"}
+      = link_to "javascript:;", id: "resetMeds", class: "btn btn-danger" do
         %span.glyphicon.glyphicon-repeat
         Reset
     #results-block

@@ -22,10 +22,16 @@ jQuery(function ($) {
     $('#medicines').append($('#new_med_form').html());
   });
 
+  $('#resetMeds').click(function() {
+    remove_all_meds();
+    add_new_med(3);
+  });
+
   $(document).on('change', 'select', function() {
-    $(this.closest(".row").getElementsByClassName( 'score' )[0]).text(this.selectedOptions[0].attributes['score'].value);
-    $(this.closest(".row").getElementsByClassName( "medicine" )[0]).text(this.selectedOptions[0].attributes['medicine'].value);
-    $(this.closest(".row").getElementsByClassName( "brands" )[0]).text(this.selectedOptions[0].attributes['brands'].value);
+    var fields = ['score', 'medicine', 'brands'];
+    for(var i=0; i<fields.length; i++){
+      $(this.closest(".row").getElementsByClassName(fields[i])[0]).text(this.selectedOptions[0].attributes[fields[i]].value);
+    }
     refresh_all_scores();
   });
 
@@ -38,7 +44,6 @@ jQuery(function ($) {
       document.getElementById('no_fields').style.display = 'block';
     }
   });
-
 });
 
 (function() {
@@ -49,9 +54,21 @@ jQuery(function ($) {
   };
 }).call(this);
 
+function remove_all_meds() {
+  document.getElementById('medicines').innerHTML = "";
+  refresh_all_scores();
+}
+
+function add_new_med(count = 1) {
+  var foo = new Array(count);
+  for(var i=0; i<foo.length; i++){
+    document.getElementById('medicines').append(document.getElementById('new_med_form').children[0].cloneNode(true));
+  }
+}
+
 function refresh_all_scores() {
   var total = 0;
-  $('.score').each( function(index, value) {
+  $('.score').each(function(index, value) {
     total = total + parseInt(value.textContent);
   })
   $('.total').text(total);
