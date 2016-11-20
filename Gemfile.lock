@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/wycats/rack-offline.git
+  revision: 355b2ecd88667857b26852a84a297c60fed7fc2d
+  specs:
+    rack-offline (0.6.4)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -187,6 +193,7 @@ DEPENDENCIES
   listen (~> 3.0.5)
   pg (~> 0.18)
   puma (~> 3.0)
+  rack-offline!
   rails (~> 5.0.0, >= 5.0.0.1)
   sass-rails (~> 5.0)
   spring
