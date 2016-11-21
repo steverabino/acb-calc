@@ -13,7 +13,7 @@ this.GoogleAnalytics = (function() {
       a.async = 1;
       a.src = g;
       m.parentNode.insertBefore(a, m);
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
     ga('create', GoogleAnalytics.analyticsId(), 'auto');
 
     if (typeof Turbolinks !== 'undefined' && Turbolinks.supported) {
