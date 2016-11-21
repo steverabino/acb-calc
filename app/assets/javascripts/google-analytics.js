@@ -3,3 +3,12 @@
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 ga('create', 'UA-87675193-1', 'auto');
+
+if (document.domain.indexOf("local") == -1) {
+  document.addEventListener('turbolinks:load', function(event) {
+    if (typeof ga === 'function') {
+      ga('set', 'location', event.data.url);
+      return ga('send', 'pageview');
+    }
+  });
+};
