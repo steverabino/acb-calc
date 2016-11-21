@@ -17,7 +17,7 @@ Rails.application.routes.draw do
       cache ActionController::Base.helpers.image_path("logo.png")
 
       # cache other assets
-      network "/"
+      network "*"
     end
     get "/application.manifest" => offline
   end
