@@ -19,14 +19,31 @@
       .collapse.navbar-collapse#navbar-collapse-1
         %ul.nav.navbar-nav.navbar-right
           %li
-            = link_to "About ACB", "/pages/about"
+            - if [root_path, "/welcome/index"].include? request.path
+              = link_to "Home", root_path, style: "color: #BBB"
+            - else
+              = link_to "Home", root_path
           %li
-            = link_to "Medicines Scorecard", medicines_path
+            - if request.path.include? "/pages"
+              = link_to "About ACB", "/pages/about", style: "color: #BBB"
+            - else
+              = link_to "About ACB", "/pages/about"
+          %li
+            - if request.path.include? "/medicines"
+              = link_to "Medicines Scorecard", medicines_path, style: "color: #BBB"
+            - else
+              = link_to "Medicines Scorecard", medicines_path
           - if user_signed_in?
             %li
-              = link_to "Change Password", edit_user_registration_path
+              - if request.path == edit_user_registration_path
+                = link_to "Change Password", edit_user_registration_path, style: "color: #BBB"
+              - else
+                = link_to "Change Password", edit_user_registration_path
             %li
               = link_to "Logout", destroy_user_session_path, method: :delete
           - else
             %li
-              = link_to "Admin login", new_user_session_path
+              - if request.path == new_user_session_path
+                = link_to "Admin login", new_user_session_path, style: "color: #BBB"
+              - else
+                = link_to "Admin login", new_user_session_path
