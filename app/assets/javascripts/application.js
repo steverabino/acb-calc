@@ -75,7 +75,7 @@ function refresh_all_scores() {
   $('.total').text(total);
   if (parseInt(document.getElementById('total').innerText) >= 3) {
     document.getElementById('high-risk-warning').style.display = 'table-cell';
-    document.getElementById('high-risk-info').style.display = 'table-cell';
+    document.getElementById('high-risk-info').style.display = 'block';
   } else {
     document.getElementById('high-risk-warning').style.display = 'none';
     document.getElementById('high-risk-info').style.display = 'none';
