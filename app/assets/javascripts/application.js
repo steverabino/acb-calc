@@ -31,6 +31,10 @@ jQuery(function ($) {
     var fields = ['score', 'medicine', 'brands'];
     for(var i=0; i<fields.length; i++){
       $(this.closest(".row").getElementsByClassName(fields[i])[0]).text(this.selectedOptions[0].attributes[fields[i]].value);
+      if(fields[i] == "score") {
+        number = convert_to_text(this.selectedOptions[0].attributes[fields[i]].value)
+        $(this.closest(".row").getElementsByClassName(fields[i])[0]).removeClass('number--zero').removeClass('number--one').removeClass('number--two').removeClass('number--three').addClass('number--' + number);
+      }
     }
     refresh_all_scores();
   });
@@ -59,6 +63,16 @@ function remove_all_meds() {
   refresh_all_scores();
 }
 
+function convert_to_text(number) {
+  if(number < 4) {
+    var number_list = {0: "zero", 1: "one", 2: "two", 3: "three"};
+    return number_list[number];
+  }
+  else {
+    return "three"
+  }
+}
+
 function add_new_med(count) {
   var count = typeof count === 'undefined' ? 1 : count;
   var foo = new Array(count);
@@ -72,7 +86,8 @@ function refresh_all_scores() {
   $('.score').each(function(index, value) {
     total = total + parseInt(value.textContent);
   })
-  $('.total').text(total);
+  number = convert_to_text(total);
+  $('#total').text(total).removeClass('number--zero').removeClass('number--one').removeClass('number--two').removeClass('number--three').addClass('number--' + number);
   if (parseInt(document.getElementById('total').innerText) >= 3) {
     document.getElementById('high-risk-warning').style.display = 'table-cell';
     document.getElementById('high-risk-info').style.display = 'block';
