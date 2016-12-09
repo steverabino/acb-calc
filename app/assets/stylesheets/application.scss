@@ -32,10 +32,6 @@ body {
 
 .page-row-expanded { height: 100%; }
 
-span.score, span.total {
-  font-size: x-large;
-}
-
 footer.navbar {
   margin-bottom: 0;
 }
@@ -59,7 +55,7 @@ footer.navbar {
   margin-bottom: 10px;
   .result-table-heading {
     font-size: 1.2em;
-    width: 140px;
+    width: 135px;
   }
 }
 
@@ -79,7 +75,7 @@ footer.navbar {
 
 #high-risk-warning {
   display: table-cell;
-  padding-left: 20px;
+  padding-left: 10px;
   color: red;
   font-weight: bold;
   display: none;
@@ -143,12 +139,52 @@ footer.navbar {
   }
 }
 
+.score-container {
+  margin-top: 5px;
+}
+
 .bottom-rule {
   border-bottom: 1px solid lightgray;
 }
 
 .brands-container {
   margin-bottom: 10px;
+}
+
+.number{
+  border-radius: 50%;
+  width: 27px;
+  height: 27px;
+  padding: 2px;
+  margin-bottom: 3px;
+  text-align: center;
+  font: 20px Arial, sans-serif;
+  font-weight: bold;
+  display: block;
+}
+
+.number--zero {
+  @extend .number;
+  background: #CF9;
+  border: 1px solid #360;
+}
+
+.number--one {
+  @extend .number;
+  background: #FF9;
+  border: 1px solid #CC0;
+}
+
+.number--two {
+  @extend .number;
+  background: #FC9;
+  border: 1px solid #C60;
+}
+
+.number--three {
+  @extend .number;
+  background: #F99;
+  border: 1px solid #900;
 }
 
 nav.navbar {
