@@ -1,9 +1,6 @@
 .container
   .left-hand-side.col-xs-12.col-md-4
     #medicines
-      = render "medicine"
-      = render "medicine"
-      = render "medicine"
 
     #buttons-block
       = link_to "javascript:;", id: "addNewMed", class: "btn btn-info", style: "margin-right: 5px" do
@@ -37,3 +34,6 @@
 
 #new_med_form{ style: 'display: none;' }
   = render "medicine"
+
+:javascript
+  add_new_med(3);
