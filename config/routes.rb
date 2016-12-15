@@ -13,6 +13,7 @@ Rails.application.routes.draw do
       cache ActionController::Base.helpers.asset_path("application.css")
       cache ActionController::Base.helpers.asset_path("application.js")
       cache ActionController::Base.helpers.asset_path("proximanova-regular.otf")
+      cache ActionController::Base.helpers.asset_path("bootstrap/glyphicons-halflings-regular.wolff2")
       cache ActionController::Base.helpers.image_path("grandma.jpg")
       cache ActionController::Base.helpers.image_path("icon.png")
       cache ActionController::Base.helpers.image_path("logo.png")
