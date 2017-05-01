@@ -16,13 +16,7 @@ this.GoogleAnalytics = (function() {
     })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
     ga('create', GoogleAnalytics.analyticsId(), 'auto');
 
-    if (typeof Turbolinks !== 'undefined' && Turbolinks.supported) {
-      return document.addEventListener("turbolinks:load", (function() {
-        return GoogleAnalytics.trackPageview();
-      }), true);
-    } else {
-      return GoogleAnalytics.trackPageview();
-    }
+    return GoogleAnalytics.trackPageview();
   };
 
   GoogleAnalytics.trackPageview = function(url) {
