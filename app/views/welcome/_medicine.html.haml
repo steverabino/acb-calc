@@ -2,7 +2,7 @@
   .medicine-line
     .top-line
       .col-xs-10
-        = select_tag("medicines[]", options_for_select(select_options), include_blank: false, class: "form-control", id: "med-select")
+        = text_field_tag "med-textbox", nil, placeholder: "Start typing...", class: "form-control js-meds-autocomplete"
       .bin.col-xs-2{ style: "padding-left: 0;" }
         %a.glyphicon.glyphicon-trash{ href: '#', onclick: "removeChoice($(this))" }
     .bottom-line

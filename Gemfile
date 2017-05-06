@@ -37,11 +37,17 @@ gem 'bootstrap-sass', '~> 3.3.7'
 # Forms
 gem 'cocoon'
 
+# Forms placeholders in IE
+gem 'placeholder-gem', '~> 3.0', '>= 3.0.2'
+
 # Users
 gem 'devise'
 
 # Offline caching
 gem 'rack-offline', :git => 'https://github.com/wycats/rack-offline.git'
+
+# Autocomplete
+gem 'twitter-typeahead-rails', :git => "https://github.com/yourabi/twitter-typeahead-rails.git"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

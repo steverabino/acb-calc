@@ -4,6 +4,15 @@ GIT
   specs:
     rack-offline (0.6.4)
 
+GIT
+  remote: https://github.com/yourabi/twitter-typeahead-rails.git
+  revision: fc343ac2f026589117bad0b7234c8bc69ef8bd6a
+  specs:
+    twitter-typeahead-rails (0.11.1.pre.corejavascript)
+      actionpack (>= 3.1)
+      jquery-rails
+      railties (>= 3.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -104,6 +113,8 @@ GEM
       mini_portile2 (~> 2.1.0)
     orm_adapter (0.5.0)
     pg (0.20.0)
+    placeholder-gem (3.0.2)
+      railties (>= 3.1)
     puma (3.8.2)
     rack (2.0.1)
     rack-test (0.6.3)
@@ -190,12 +201,14 @@ DEPENDENCIES
   jquery-rails
   listen (~> 3.0.5)
   pg (~> 0.18)
+  placeholder-gem (~> 3.0, >= 3.0.2)
   puma (~> 3.0)
   rack-offline!
   rails (~> 5.0.0, >= 5.0.0.1)
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
+  twitter-typeahead-rails!
   tzinfo-data
   uglifier (>= 1.3.0)
   web-console

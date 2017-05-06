@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
   devise_for :users
-  get 'welcome/index'
 
   resources :medicines
 
   root 'welcome#index'
 
   get "/pages/:page" => "pages#show"
+
+  get "welcome/autocomplete" => "welcome#autocomplete"
 
   if Rails.env.production?
     offline = Rack::Offline.configure :cache_interval => 120 do

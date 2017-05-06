@@ -16,3 +16,4 @@
 //= require bootstrap-sprockets
 //= require cocoon
 //= require app.js
+//= require placeholder

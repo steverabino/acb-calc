@@ -17,6 +17,40 @@
 @import "bootstrap";
 @import "fonts";
 
+span.twitter-typeahead {
+  width: 100%;
+}
+
+span.twitter-typeahead {
+  display: block !important;
+  .tt-dropdown-menu {
+    top: 32px !important;
+    width: 100%;
+  }
+  .tt-menu {
+    width: 100%;
+    margin: 0;
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 0 0 8px 8px;
+    -moz-border-radius: 0 0 8px 8px;
+    border-radius: 0 0 8px 8px;
+    -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    .tt-cursor {
+      background-color: lightblue;
+    }
+    .tt-selectable:hover {
+      cursor: pointer;
+      background-color: lightblue;
+    }
+  }
+}
+
 html,
 body { height: 100%; }
 
@@ -62,6 +96,7 @@ footer.navbar {
 .result-table-heading {
   display: table-cell;
   width: 75px;
+  vertical-align: bottom;
 }
 
 .result-table-values {
@@ -141,6 +176,8 @@ footer.navbar {
 
 .score-container {
   margin-top: 5px;
+  min-height: 29px;
+  display: table;
 }
 
 .bottom-rule {
@@ -164,6 +201,7 @@ footer.navbar {
 }
 
 .number--zero {
+  display: none;
   @extend .number;
   background: #CF9;
   border: 1px solid #360;
