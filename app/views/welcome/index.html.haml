@@ -36,4 +36,17 @@
   = render "medicine"
 
 :javascript
+  myVar = #{(Time.now - Medicine.all.order('updated_at DESC').first.updated_at) * 1000}
+  console.log("MYVAR=" + myVar);
+  console.log("TTL=" + medsTypeahead.prefetch.ttl);
+  if(myVar < medsTypeahead.prefetch.ttl) {
+    var medsTypeahead = new Bloodhound({
+      datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
+      queryTokenizer: Bloodhound.tokenizers.whitespace,
+      prefetch: {
+        url: "/welcome/autocomplete",
+        cache: false,
+      }
+    });
+  }
   add_new_med(3);
