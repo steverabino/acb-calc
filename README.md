@@ -18,6 +18,13 @@ The app also provides a password-protected admin interface to be able to update
 medical names, associated brand names, and scores of all medicines included, as
 well as to add any new medicines they decide.
 
+The ACB Calculator is the brainchild of Dr. Rebecca King of The Schoolhouse
+Surgery, built by Steve Smith, and its logo designed by Alison Collantine of 
+[Dreamfly](http://dreamfly.co.uk/)
+
+Update: The app has been highly commended in the 
+[Patient Safety Awards 2017](https://awards.patientsafetycongress.co.uk/patient-safety-awards-winners-2017-1)
+
 ## Technology
 
 The app is a Ruby on Rails (version 5) project using Ruby version 2.3.0.
