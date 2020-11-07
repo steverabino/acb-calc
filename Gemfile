@@ -32,7 +32,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'haml'
 
 # Make views pretty
-gem 'bootstrap-sass', '~> 3.3.7'
+gem 'bootstrap-sass', '~> 3.4.1'
 
 # Forms
 gem 'cocoon'
