@@ -23,7 +23,7 @@ Surgery, built by [Steve Rabino](https://github.com/stevesmith2609), and its log
 [Dreamfly](http://dreamfly.co.uk/)
 
 Update: The app has been highly commended in the 
-[Patient Safety Awards 2017](https://awards.patientsafetycongress.co.uk/patient-safety-awards-winners-2017-1)
+[Patient Safety Awards 2017](https://web.archive.org/web/20190922235507/https://awards.patientsafetycongress.co.uk/patient-safety-awards-winners-2017-1)
 
 ## Technology
 
